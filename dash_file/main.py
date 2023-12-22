@@ -9,7 +9,7 @@ import sqlite3
 import plotly.express as px
 
 # 引入資料庫資料
-conn = sqlite3.connect("../pokemon_database.db")
+conn = sqlite3.connect("./pokemon_database.db")
 df = pd.read_sql_query("SELECT img_num,name,sp,expertise,level,help_fruit,help_ingredient_1,help_ingredient_num_1,help_ingredient_num_2,help_ingredient_num_3,help_time,help_max,skill_main,power_up,power_down FROM pokemon", conn)
 df.loc[0].to_list()
 
